@@ -6,7 +6,7 @@
 /*   By: mmarzouk <mmarzouk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/28 21:36:08 by mmarzouk          #+#    #+#             */
-/*   Updated: 2020/01/03 17:04:45 by mmarzouk         ###   ########.fr       */
+/*   Updated: 2020/01/11 22:36:22 by mmarzouk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,4 +16,5 @@
 void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
+	g_r++;
 }

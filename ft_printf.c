@@ -6,7 +6,7 @@
 /*   By: mmarzouk <mmarzouk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/19 17:27:24 by mmarzouk          #+#    #+#             */
-/*   Updated: 2020/01/03 17:46:40 by mmarzouk         ###   ########.fr       */
+/*   Updated: 2020/01/11 22:12:07 by mmarzouk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int ft_printf(const char *s, ...)
 
 	g_r = 0;
 	va_start(l,s);
-	all(s,l);
+	all((char*)s,l);
 	va_end(l);
 	return (g_r);
 }

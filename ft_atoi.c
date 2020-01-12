@@ -6,7 +6,7 @@
 /*   By: mmarzouk <mmarzouk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/28 21:38:01 by mmarzouk          #+#    #+#             */
-/*   Updated: 2020/01/03 17:45:09 by mmarzouk         ###   ########.fr       */
+/*   Updated: 2020/01/11 21:12:33 by mmarzouk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static int	condition(long resultat, int signe)
 	return (0);
 }
 
-int			ft_atoi(const char *str)
+int			ft_atoi(const char *str, va_list l)
 {
 	int		signe;
 	int		i;
@@ -30,8 +30,7 @@ int			ft_atoi(const char *str)
 	resultat = 0;
 	i = 0;
 	signe = 1;
-	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n'
-			|| str[i] == '\r' || str[i] == '\f' || str[i] == '\v')
+	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n')
 		i++;
 	if (str[i] == '-' || str[i] == '+')
 	{
@@ -39,6 +38,8 @@ int			ft_atoi(const char *str)
 			signe = -1;
 		i++;
 	}
+	if (str[i] == '*')
+		return(va_arg(l, int));
 	while (str[i] >= '0' && str[i] <= '9')
 	{
 		resultat = resultat * 10 + str[i] - '0';
@@ -49,3 +50,8 @@ int			ft_atoi(const char *str)
 	}
 	return (resultat * signe);
 }
+/*int main()
+{
+	printf("%d",ft_atoi("213"));
+	return 0;
+}*/
