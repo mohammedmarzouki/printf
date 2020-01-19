@@ -6,11 +6,11 @@
 /*   By: mmarzouk <mmarzouk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/28 21:41:39 by mmarzouk          #+#    #+#             */
-/*   Updated: 2020/01/03 17:48:01 by mmarzouk         ###   ########.fr       */
+/*   Updated: 2020/01/14 17:51:04 by mmarzouk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libftprintf.h"
 
 char	*ft_strrchr(const char *str, int c)
 {

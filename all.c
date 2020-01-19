@@ -6,11 +6,11 @@
 /*   By: mmarzouk <mmarzouk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/20 13:53:43 by mmarzouk          #+#    #+#             */
-/*   Updated: 2020/01/12 18:04:44 by mmarzouk         ###   ########.fr       */
+/*   Updated: 2020/01/19 05:55:26 by mmarzouk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libftprintf.h"
 
 static void which(char *s , va_list l, int *i)
 {
@@ -26,16 +26,16 @@ static void which(char *s , va_list l, int *i)
         if (*s == 'd' || *s == 'i')
             return(ft_d(s , l , ss));
         /*else if (*s == 'c')
-            return(ft_c(s , l , ss));
+            return(ft_c(s , l , ss));*/
         else if (*s == 'u')
-            return(ft_u(s , l , ss));*/
-        else if (*s == 'x' || *s == 'X')
+            return(ft_d(s , l , ss));
+         if (*s == 'x' || *s == 'X')
             return(ft_x(s, l , ss));
-        /*else if (*s == 's')
+        else if (*s == 's')
             return(ft_s(s , l , ss));
         else if (*s == 'p')
             return(ft_p(s , l , ss));
-        else if (*s == '%')
+        /*else if (*s == '%')
             return(ft_pc(s , l , ss));*/
         s++; 
     }

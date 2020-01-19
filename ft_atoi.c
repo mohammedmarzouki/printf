@@ -6,11 +6,11 @@
 /*   By: mmarzouk <mmarzouk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/28 21:38:01 by mmarzouk          #+#    #+#             */
-/*   Updated: 2020/01/11 21:12:33 by mmarzouk         ###   ########.fr       */
+/*   Updated: 2020/01/14 17:50:20 by mmarzouk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libftprintf.h"
 
 static int	condition(long resultat, int signe)
 {

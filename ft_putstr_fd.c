@@ -6,23 +6,24 @@
 /*   By: mmarzouk <mmarzouk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/28 21:41:53 by mmarzouk          #+#    #+#             */
-/*   Updated: 2020/01/03 17:47:00 by mmarzouk         ###   ########.fr       */
+/*   Updated: 2020/01/19 06:04:55 by mmarzouk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libftprintf.h"
 
-void	ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd,int n)
 {
 	int i;
 
 	i = 0;
 	if (s)
 	{
-		while (s[i] != '\0')
+		while (s[i] != '\0' && n)
 		{
 			ft_putchar_fd(s[i], fd);
 			i++;
+			n--;
 		}
 	}
 }
